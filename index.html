@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrelas do Amanha</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <main>
+            <section class="main-container">
+                <div class="back">
+                    <img src="assets/icons/arrow-left-02.svg" alt="Voltar">
+                    <span>Voltar</span>
+                </div>
+
+                <h1>Formulario de matrícula</h1>
+                <p>Preencha os dados abaixo para matricular seu filho na escola Estrelas do Amanhã.</p>
+
+                <form method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Dados da criança</legend>
+
+                        <label>Nome completo
+                            <input type="text" name="fullname" placeholder="Qual o nome da criança">
+                        </label>
+
+                        <label>Data de nascimento
+                            <input type="date" name="birth" lang="pt-BR">
+                        </label>
+
+                        <label>Sexo
+                            <select name="gender">
+                                <option value="female">Feminino</option>
+                                <option value="male">Masculino</option>
+                                <option value="na">Prefiro não responder</option>
+                            </select>
+                        </label>
+
+                        <label>Informações médicas
+                            <textarea name="medical-info" rows="5" placeholder="A criança possui alguma condição médica? Especifique."></textarea>
+                        </label>
+
+                        <label>Certidão de Nascimento</label>
+                        <div class="dropzone">
+                            <input type="file" name="birth-file">
+                            <img src="assets/icons/cloud-upload.svg" alt="Upload">
+                            <p>Selecione os arquivos</p>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+                        <label>CEP
+                            <input type="text" name="cep">
+                        </label>
+
+                        <div class="flex">
+                            <label class="flex-2">Rua
+                                <input type="text" name="street" value="Rua das Flores" disabled>
+                            </label>
+
+                            <label class="flex-1">Número
+                                <input type="number" name="number">
+                            </label>
+                        </div>
+
+                        <div class="flex">
+                            <label class="flex-2">Cidade
+                                <input type="text" name="city" value="São Paulo" disabled>
+                            </label>
+
+                            <label class="flex-1">Estado
+                                <input type="text" name="state" value="SP" disabled>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Responsável</legend>
+
+                        <label>Nome do responsável
+                            <input type="text" name="gardian">
+                            <small>Responsável legal e contato de emergência</small>
+                        </label>
+
+                        <label>Telefone
+                            <input type="text" name="phone" placeholder="(10) 9 8765-4321">
+                        </label>
+
+                        <label>Email
+                            <input type="email" name="mail" required>
+                            <span class="error">
+                                <img src="assets/icons/alert-circle.svg" alt="Erro">
+                                Insira um e-mail válido
+                            </span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Opções</legend>
+
+                        <div>
+                            <p>Turno desejado:</p>
+                            <label><input type="radio" name="study-shift" value="morning"> Manhã</label>
+                            <label><input type="radio" name="study-shift" value="evening"> Tarde</label>
+                        </div>
+
+                        <div>
+                            <p>Esporte preferido:</p>
+                            <label><input type="radio" name="sport" id="football"> Futebol</label>
+                            <label><input type="radio" name="sport" id="basketball"> Basquete</label>
+                            <label><input type="radio" name="sport" id="swimming"> Natação</label>
+                            <label><input type="radio" name="sport" id="yoga"> Yoga</label>
+                            <label><input type="radio" name="sport" id="volleyball"> Vôlei</label>
+                            <label><input type="radio" name="sport" id="boxing"> Boxe</label>
+                        </div>
+                    </fieldset>
+
+                    <label class="terms-wrapper">
+                        <input type="checkbox" name="terms">
+                        Li e concordo com os <strong>Termos</strong> e a <strong>Política de Privacidade</strong>.
+                    </label>
+
+                    <div class="actions-wrapper">
+                        <button type="button" class="btn-secondary">Salvar respostas</button>
+                        <button type="submit" class="btn-primary">Fazer matrícula</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <aside>
+            <div class="aside-container">
+                <header>
+                    <img src="assets/logo.svg" alt="Logo">
+                    <h2>
+                        Porque cada momento de <span>aprendizado</span> conta
+                    </h2>
+                    <p>Inscreva seu filho em um ambiente seguro, acolhedor e educativo.</p>
+                </header>
+
+                <img src="assets/Illustration.svg" alt="Professor com crianças">
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>
